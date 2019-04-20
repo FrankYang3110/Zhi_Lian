@@ -88,7 +88,7 @@ def get_company_detail(work_list, old_url_set):
         # time.sleep(random.uniform(1,2))
         url = work_dict['positionURL']
         hashed_url = hash_url(url)
-        if not url in old_url_set:
+        if not hashed_url in old_url_set:
             try:
                 print('request %s start' % url)
                 re = requests.get(url, headers=HEADERS)
